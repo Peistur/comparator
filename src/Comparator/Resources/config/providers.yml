@@ -1,0 +1,8 @@
+services:
+
+    comparator.provider.comprea:
+        class: Comparator\Provider\CompreaProvider
+        arguments:
+            - '%comprea_name%'
+            - '@comparator.searcher.comprea'
+            - '@comparator.transformer.comprea'

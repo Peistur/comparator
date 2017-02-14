@@ -1,0 +1,5 @@
+services:
+
+    comparator.transformer.comprea:
+        class: Comparator\Transformer\CompreaProductTransformer
+        public: false

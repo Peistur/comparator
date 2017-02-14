@@ -1,0 +1,6 @@
+services:
+
+    comparator.searcher.comprea:
+        class: Comparator\Searcher\CompreaSearcher
+        arguments:
+            - '%comprea_search_url%'
