@@ -1,0 +1,3 @@
+parameters:
+    delsuper_name: 'DelSuper'
+    delsuper_search_url: 'https://apiprod.delsuper.es/search/3/'

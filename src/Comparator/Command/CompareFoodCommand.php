@@ -25,7 +25,7 @@ class CompareFoodCommand extends ContainerAwareCommand
 
         $searchQuery = new SearchQuery((string)$term, 5);
 
-        $compreaProvider = $this->getContainer()->get('comparator.provider.comprea');
+        $compreaProvider = $this->getContainer()->get('comparator.provider.delsuper');
 
         $result = $compreaProvider->provide($searchQuery);
 

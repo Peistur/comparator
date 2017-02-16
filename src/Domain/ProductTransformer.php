@@ -4,5 +4,5 @@ namespace Domain;
 
 interface ProductTransformer
 {
-    public function transform($product): Product;
+    public function transform($product): ProductCollection;
 }

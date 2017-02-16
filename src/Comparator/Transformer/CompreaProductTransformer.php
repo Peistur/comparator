@@ -3,16 +3,21 @@
 namespace Comparator\Transformer;
 
 use Domain\Product;
+use Domain\ProductCollection;
 use Domain\ProductTransformer;
 
 class CompreaProductTransformer implements ProductTransformer
 {
-    public function transform($resultProduct): Product
+    public function transform($results): ProductCollection
     {
-        return new Product(
-            $resultProduct->name,
-            $resultProduct->picture,
-            $resultProduct->price * 100
-        );
+        $products = array_map(function ($product) {
+            return new Product(
+                $product->name,
+                $product->picture,
+                $product->price * 100
+            );
+        } ,$results);
+
+        return new ProductCollection(...$products);
     }
 }

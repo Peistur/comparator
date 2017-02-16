@@ -12,7 +12,7 @@ class ProviderQueryResult implements \IteratorAggregate
      * @param $products
      * @param $provider
      */
-    public function __construct(string $provider, Product ...$products)
+    public function __construct(string $provider, ProductCollection $products)
     {
         $this->provider = $provider;
         $this->products = $products;

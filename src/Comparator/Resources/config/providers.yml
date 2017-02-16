@@ -6,3 +6,10 @@ services:
             - '%comprea_name%'
             - '@comparator.searcher.comprea'
             - '@comparator.transformer.comprea'
+
+    comparator.provider.delsuper:
+        class: Comparator\Provider\DelsuperProvider
+        arguments:
+            - '%delsuper_name%'
+            - '@comparator.searcher.delsuper'
+            - '@comparator.transformer.delsuper'

@@ -2,5 +2,12 @@ services:
 
     comparator.searcher.comprea:
         class: Comparator\Searcher\CompreaSearcher
+        public: false
         arguments:
             - '%comprea_search_url%'
+
+    comparator.searcher.delsuper:
+        class: Comparator\Searcher\DelsuperSearcher
+        public: false
+        arguments:
+            - '%delsuper_search_url%'

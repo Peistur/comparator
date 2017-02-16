@@ -3,3 +3,7 @@ services:
     comparator.transformer.comprea:
         class: Comparator\Transformer\CompreaProductTransformer
         public: false
+
+    comparator.transformer.delsuper:
+        class: Comparator\Transformer\DelsuperProductTransformer
+        public: false

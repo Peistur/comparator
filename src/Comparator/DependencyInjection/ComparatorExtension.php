@@ -25,7 +25,9 @@ class ComparatorExtension extends Extension
         );
         $loader->load('searcher.yml');
         $loader->load('providers.yml');
-        $loader->load('comprea.yml');
         $loader->load('transformers.yml');
+
+        $loader->load('comprea.yml');
+        $loader->load('delsuper.yml');
     }
 }

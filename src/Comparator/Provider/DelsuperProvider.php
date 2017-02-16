@@ -8,7 +8,7 @@ use Domain\ProviderQueryResult;
 use Domain\Searcher;
 use Domain\SearchQuery;
 
-class CompreaProvider implements Provider
+class DelsuperProvider implements Provider
 {
     private $providerName;
     private $searcher;
@@ -35,16 +35,9 @@ class CompreaProvider implements Provider
         $productResult = $this->searcher->search($searchQuery->term());
         $products = $this->transformer->transform($productResult);
 
-//        $products = $this->applyLimit($products, $searchQuery->limit());
-
         return new ProviderQueryResult(
             $this->providerName,
             $products
         );
-    }
-
-    private function applyLimit(array $productResult, int $limit): array
-    {
-        return array_slice($productResult, 0, $limit);
     }
 }
